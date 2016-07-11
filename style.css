@@ -1,0 +1,206 @@
+/*
+Theme Name: agl-developpement
+Theme URI: http://www.agl-developpement.ch/
+Description: Customized theme for agl-developpement
+Author: Jean-Michel Gonet
+Author URI: jmgonet.agl-developpement.ch
+Version: 1.0
+
+Tags:
+
+License:
+License URI:
+
+General comments (optional).
+*/
+@import "fonts/css/akzidenz-grotesk-extraboldalt.css";
+@import "fonts/css/akzidenz-grotesk-regular.css";
+@import "fonts/css/akzidenz-grotesk-super.css";
+@import "fonts/css/andale-mono.css";
+
+html
+{
+	margin: 0px;
+	border: 10px solid white;
+}
+
+body 
+{
+	background-color: #e3e4d3;
+	background-image: url(images/arrows.png);
+	background-size: 500px auto;
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	font-family: AG-Regular;
+	padding: 0px 0px 180px 0px;
+}
+
+/**
+ *      The logo
+ */
+header.logo
+{
+	height: 145px;
+	max-width: 640px;
+}
+header.logo p
+{
+	float:left;
+}
+header.logo p.logo
+{
+	background-image: url(images/logo.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	font-family: Andale-Mono;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: -1.1px;
+	padding: 115px 0px 6px 63px;
+	margin: 0px 0px 0px 20px;
+ }
+ header.logo p.logo a
+ {
+	 color: #4e4e4e;
+	 text-decoration: none;
+ }
+ header.logo p.description
+ {
+	 color: white;
+	 font-family: AG-BoldAlt;
+	 font-size: 24px;
+	 letter-spacing: 0.1px;
+	 margin: 0px;
+	 padding: 32px 0px 0px 150px;
+ }
+/**
+ *      The menus
+ */
+nav.menu {
+	
+}
+
+nav.menu ul {
+	list-style-type: none;
+	margin: 13px 0px 0px 210px;
+	padding: 0px;
+}
+nav.menu ul li {
+	display: inline; 
+	font-size: 13px;
+	font-family: AG-BoldAlt;
+	letter-spacing: 0.4px;
+	margin-right: 10px;
+}
+
+nav.menu ul li a {
+	text-decoration: none;
+	color: #191919;
+}
+
+nav.menu ul li a:hover {
+	text-decoration: underline;
+}
+
+nav.menu ul li.current-menu-item a {
+	text-decoration: underline;
+}
+
+/**
+ * The content
+ */
+div.content
+{
+	margin: 40px 0px 0px 185px;
+	max-width: 380px;
+	font-size: 16px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 410px) {
+	div.content {       
+		 margin: 40px 0px 0px 20px!important;
+	}
+
+	header.logo p.description {
+		right: 20px;
+	        font-size: 22px;
+		position: absolute;
+	}
+       	nav.menu ul {
+                margin: 13px 0px 10px 20px;
+        }
+	body {
+		background-size: 320px auto;
+	}
+        /* special contact form */
+        td.mobile {
+                display:block!important;
+        }
+}
+
+@media screen and (min-width: 410px) and (max-width: 500px) {
+        div.content {    
+        	margin: 40px 0px 0px 40px!important;
+	}
+        header.logo p.description {
+                right: 25px;
+                position: absolute;
+        }
+	nav.menu ul {
+		margin: 13px 0px 10px 40px;
+	}
+        body {
+                background-size: 370px auto;
+        }
+}
+
+@media screen and (min-width: 500px) and (max-width: 600px) {
+        div.content {    
+	        margin: 40px 0px 0px 90px!important;
+	}
+        header.logo p.description {
+                right: 30px;
+                position: absolute;
+        }
+        nav.menu ul {
+                margin: 13px 0px 10px 90px;
+        }
+        body {
+                background-size: 430px auto;
+        }
+}
+@media screen and (min-width: 600px) and (max-width: 690px) {
+        header.logo p.description {
+                right: 35px;
+                position: absolute;
+        }
+}
+
+
+div.content h1
+{
+	font-family: AG-BoldAlt;
+	font-size: 20px;
+	letter-spacing: 0.4px;
+	margin: 40px 0px 32px 0px;
+}
+
+div.content h2
+{
+	font-family: AG-BoldAlt;
+	font-size: 14px;
+	letter-spacing: 0.4px;
+	color: #006ca0;
+	margin: 30px 0px 5px 0px;
+}
+
+div.content p
+{
+	margin: 0px 0px 20px 0px;
+}
+
+div.content em
+{
+	font-family: Andale-Mono;
+	font-style: normal;
+}

@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'AG-BoldAlt';
+  src: url('../fonts/AkzidenzGrotesk-ExtraBoldAlt.eot');
+  src: url('../fonts/AkzidenzGrotesk-ExtraBoldAlt.eot?#iefix') format('embedded-opentype'), url('../fonts/AkzidenzGrotesk-ExtraBoldAlt.woff') format('woff'), url('../fonts/AkzidenzGrotesk-ExtraBoldAlt.ttf') format('truetype'), url('../fonts/AkzidenzGrotesk-ExtraBoldAlt.svg#AkzidenzGroteskBQ-XBoldAlt') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
