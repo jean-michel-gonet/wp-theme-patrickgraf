@@ -14,18 +14,18 @@
 	remove_action('wp_head', 'wlwmanifest_link');
 
 	// This is to remove the admin bar on top of the web site:
-	add_filter( 'show_admin_bar' , 'agl_has_no_admin_bar');
-	function agl_has_no_admin_bar() 
+	add_filter( 'show_admin_bar' , 'pgraf_has_no_admin_bar');
+	function pgraf_has_no_admin_bar() 
 	{ 
 		return false; 
 	}
 
 	// This is to include js libraries  
-	add_action( 'wp_enqueue_scripts', 'agl_scripts_with_jquery' );
-	function agl_scripts_with_jquery()  
+	add_action( 'wp_enqueue_scripts', 'pgraf_scripts_with_jquery' );
+	function pgraf_scripts_with_jquery()  
 	{  
-		wp_register_script( 'agl-script', get_template_directory_uri() . '/agl-developpement.js', array( 'jquery' ) );
-		wp_enqueue_script( 'agl-script' );  
+		wp_register_script( 'pgraf-script', get_template_directory_uri() . '/pgraf.js', array( 'jquery' ) );
+		wp_enqueue_script( 'pgraf-script' );  
 	}		
 
 ?>
