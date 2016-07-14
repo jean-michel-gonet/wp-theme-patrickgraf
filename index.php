@@ -11,6 +11,9 @@
 	</head>
 	<body>
 		<nav class="menu">
+			<ul>
+			<?php wp_list_categories(array('title_li' => '')); ?>
+			</ul>
 			<?php wp_nav_menu(array('menu' => 'Main Navigation')); ?>	
 		</nav>
 		<header class="logo">
