@@ -14,7 +14,15 @@
 			<ul>
 			<?php wp_list_categories(array('title_li' => '')); ?>
 			</ul>
-			<?php wp_nav_menu(array('menu' => 'Main Navigation')); ?>	
+			<?php 
+				wp_nav_menu(
+					array(
+						'theme_location' => 'primary-menu', 
+						'container' => false
+					)
+				); 
+			?>
+
 		</nav>
 		<header class="logo">
 			<p class="logo"><a href="/"><?php bloginfo(); ?></a></p>

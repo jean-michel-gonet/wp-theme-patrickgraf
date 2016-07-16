@@ -26,6 +26,12 @@
 	{  
 		wp_register_script( 'pgraf-script', get_template_directory_uri() . '/pgraf.js', array( 'jquery' ) );
 		wp_enqueue_script( 'pgraf-script' );  
-	}		
+	}
+	
+	// Register a menu
+	add_action('init', 'register_menu');
+	function register_menu() {
+		register_nav_menu('primary-menu', 'Primary Menu');
+	}
 
 ?>
