@@ -27,11 +27,18 @@
 		wp_register_script( 'pgraf-script', get_template_directory_uri() . '/pgraf.js', array( 'jquery' ) );
 		wp_enqueue_script( 'pgraf-script' );  
 	}
+
+	// This is to remove wrapping ul in menus
+	// remove ul wp_nav_menu
+	add_filter( 'wp_nav_menu', 'pgraf_menus_have_no_ul' );
+	function pgraf_menus_have_no_ul( $menu ) {
+		return preg_replace( array( '#^<ul[^>]*>#', '#</ul>$#' ), '', $menu );
+	}
 	
 	// Register a menu
 	add_action('init', 'register_menu');
 	function register_menu() {
-		register_nav_menu('primary-menu', 'Primary Menu');
+		register_nav_menu('right-menu', 'Right Menu');
 	}
 
 ?>
