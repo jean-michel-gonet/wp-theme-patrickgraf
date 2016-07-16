@@ -16,9 +16,8 @@
 	</head>
 	<body id="page">
 		<div class="container">
-			<header class="logo">
-				<p class="logo"><a href="/"><?php bloginfo(); ?></a></p>
-				<p class="description"><?php bloginfo('description'); ?></p>
+			<header id="header">	
+				<h1 class="page-title"><a href="/"><?php bloginfo(); ?></a></h1>
 			</header>
 			<nav class="off-canvas-navigation">
 				<ul>
