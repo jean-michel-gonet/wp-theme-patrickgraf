@@ -124,7 +124,6 @@ clearfix:after { /* clearfix */
 	background: #eee;
 	box-shadow: 0 0 25px rgba(0,0,0,.2);
 	float: left;
-	z-index: 1;
 	position: relative;
 }
 .js [role="complementary"] {	

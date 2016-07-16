@@ -12,8 +12,8 @@ var showMenu = function() {
 
 // add/remove classes everytime the window resize event fires
 jQuery(window).resize(function(){
-	var off_canvas_nav_display = $('.off-canvas-navigation').css('display');
-	var menu_button_display = $('.menu-button').css('display');
+	var off_canvas_nav_display = jQuery('.off-canvas-navigation').css('display');
+	var menu_button_display = jQuery('.menu-button').css('display');
 	if (off_canvas_nav_display === 'block') {			
 		jQuery("body").removeClass("three-column").addClass("small-screen");				
 	} 
