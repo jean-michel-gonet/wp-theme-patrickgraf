@@ -15,7 +15,7 @@ var getBiggestImageSource = function(srcset) {
 	var biggestImageSource;
 
 	var srcsetEntries = srcset.split(',');
-	for(const srcsetEntry of srcsetEntries) {
+	for(var srcsetEntry of srcsetEntries) {
 		var tokenizedSrcsetEntry = srcsetEntry.trim().split(' ');
 		var imageWidth = parseInt(tokenizedSrcsetEntry[1].substring(0, tokenizedSrcsetEntry[1].length - 1));
 		if (imageWidth > biggestImageWidth) {

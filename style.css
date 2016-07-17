@@ -50,7 +50,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 audio:not([controls]) { display: none; }
 [hidden] { display: none; }
-html { font-size: 100%; min-heigh: 100%; /*overflow-y: scroll*/; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html { font-size: 100%; min-heigh: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 ::-moz-selection { background: #ff0; color: #000; text-shadow: none; }
 ::selection { background: #ff0; color: #000; text-shadow: none; }
 body { position: relative; color: #333; color: rgba(0,0,0,.7); background: #99a1a5 url('images/background.gif') -50% top; margin-top: .5em; }
@@ -84,13 +84,16 @@ figcaption { text-align: center; }
 	background-color: rgba(0, 0, 0, 0.4);
 	z-index: 10;
 	overflow: scroll;
+	align-items: center;
 	display: none;
 }
 .image-viewer.active {
 	display: block;
 }
 .image-viewer img {
-	margin: 2em;
+	margin: auto;
+	padding: 2em;
+	display: block;
 }
 .noscroll {
 	overflow: hidden;
