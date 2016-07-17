@@ -15,6 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" >		
 	</head>
 	<body id="page">
+		<div class="image-viewer"><img src=""/></div>
 		<div class="container">
 			<header id="header">	
 				<h1 class="page-title"><a href="/"><?php bloginfo(); ?></a></h1>
