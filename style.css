@@ -141,6 +141,9 @@ nav[role="navigation"] {
 	float: none;
 	padding: 0.1em 0.9em 0.6em 0; /* Akzidenz Grotest has a slight offset on the top.*/
 }
+[role="navigation"] li:empty {
+	display: none;
+}
 [role="navigation"] li a {
 	display: block;
 }

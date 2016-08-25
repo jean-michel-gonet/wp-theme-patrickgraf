@@ -12,7 +12,9 @@
 		<meta name="robots" content="index, follow" />
 		<?php wp_head(); ?>
 		<link rel="icon" type="image/png" href="favicon.png" />		
-		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" >		
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
+		<link rel="prev" href="<?php echo get_previous_posts_page_link(); ?>" />
+		<link rel="next" href="<?php echo get_next_posts_page_link(); ?>" />
 	</head>
 	<body id="page">
 		<div class="image-viewer"><img src=""/></div>
@@ -47,6 +49,10 @@
 					}
 				?>
 			</section>
+			<ul id="pagination" role="navigation">
+				<li class="nav-next"><?php previous_posts_link( 'Newer posts' ); ?></li>	
+				<li class="nav-previous"><?php next_posts_link( 'Older posts' ); ?></li>
+			</ul>
 		</div>
 	</body>
 </html>
