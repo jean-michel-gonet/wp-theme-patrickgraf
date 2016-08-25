@@ -71,6 +71,8 @@ strong { font-weight: 900; font-family: "AG-Bold", clean, sans-serif;}
 .page-title a:hover { color: #555; }
 [role="navigation"] a {text-decoration: none; color: #929292; font-weight: 900; }
 [role="navigation"] a:hover { color: #ce545f; }
+[role="navigation"] .current-cat a {color: #ce545f;}
+[role="navigation"] .current-menu-item a {color: #ce545f;}
 figure { margin: 10% 0; }
 figcaption { text-align: center; }
 
