@@ -20,15 +20,17 @@
 			<header id="header">	
 				<h1 class="page-title"><a href="/"><?php bloginfo(); ?></a></h1>
 			</header>
-			<nav class="off-canvas-navigation">
-				<ul>
-					<li class="menu-item"><a class='menu-button' href="#menu">Menu</a></li>			
-					<li class="sidebar-item"><a class='sidebar-button' href="#sidebar">Extra</a></li>
-				</ul>
-			</nav>			
 			<nav id="menu" role="navigation">
 				<ul id="nav">
 				<?php wp_list_categories(array('title_li' => '')); ?>
+				<?php 
+					wp_nav_menu(
+						array(
+							'theme_location' => 'right-menu', 
+							'container' => false
+						)
+					); 
+				?>
 				</ul>
 			</nav>
 			<section role="main">
@@ -37,33 +39,14 @@
 					{
 						while ( have_posts() ) 
 						{
+				?><div class="article"><?php
 							the_post(); 
 							the_content();
+				?></div><?php
 						}
 					}
 				?>
 			</section>
-			<section id="sidebar" role="complementary">
-				<aside>
-					<ul>
-						<?php 
-							wp_nav_menu(
-								array(
-									'theme_location' => 'right-menu', 
-									'container' => false
-								)
-							); 
-						?>
-					</ul>
-				</aside>
-			</section>
-			<footer class="site-footer" role="contentinfo">
-				<ul>
-					<li>Design by <a href="http://wernerarnold.name">Werner Arnold</a></li>
-					<li>Code by <a href="http://jeanmichelgonet.name">Jean-Michel Gonet</a></li>
-				</ul>	
-			</footer>		
-
 		</div>
 	</body>
 </html>

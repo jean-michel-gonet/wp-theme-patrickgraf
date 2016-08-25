@@ -1,15 +1,3 @@
-var showSidebar = function() {
-	jQuery('body').removeClass("active-nav").toggleClass("active-sidebar");
-	jQuery('.menu-button').removeClass("active-button");					
-	jQuery('.sidebar-button').toggleClass("active-button");
-}
-
-var showMenu = function() {
-	jQuery('body').removeClass("active-sidebar").toggleClass("active-nav");
-	jQuery('.sidebar-button').removeClass("active-button");				
-	jQuery('.menu-button').toggleClass("active-button");	
-}
-
 var getBiggestImageSource = function(srcset) {
 	var biggestImageWidth = 0;
 	var biggestImageSource;
