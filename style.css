@@ -66,13 +66,6 @@ blockquote, p {font-size: 9.5pt; color: #ce545f;}
 blockquote { padding: 0 5%; color: #888; font-style: italic; font-family: georgia, serf; border-left: 2px solid #ddd;}
 code { font-family: "Lucida Console" monospace, monospace; _font-family: 'Lucida Console', monospace; font-size: 15px; font-weight: 900; color: #4b9162; }
 strong { font-weight: 900; font-family: "AG-Bold", clean, sans-serif;}
-.page-title { font-size: 34px; margin: 0.5em 0 0.5em 0;}
-.page-title a { color: #333; }
-.page-title a:hover { color: #555; }
-[role="navigation"] a {text-decoration: none; color: #929292; font-weight: 900; }
-[role="navigation"] a:hover { color: #ce545f; }
-[role="navigation"] .current-cat a {color: #ce545f;}
-[role="navigation"] .current-menu-item a {color: #ce545f;}
 figure { margin: 10% 0; }
 figcaption { text-align: center; }
 
@@ -121,7 +114,18 @@ figcaption { text-align: center; }
 	width: 100%;
 	max-width: 800px;
 }
+
+/* Title */
+.page-title { font-size: 34px; margin: 0.5em 0 0.5em 0;}
+.page-title a { color: #333; }
+.page-title a:hover { color: #555; }
+
 /* Site Menu */
+[role="navigation"] a {text-decoration: none; color: #929292; font-weight: 900; }
+[role="navigation"] a:hover { color: #ce545f; }
+[role="navigation"] .current-cat a {color: #ce545f;}
+[role="navigation"] .current-menu-item a {color: #ce545f;}
+
 nav[role="navigation"] {
 	font-size: 10.5pt;
 	font-family: "AG-Bold", clean, sans-serif;
@@ -135,7 +139,7 @@ nav[role="navigation"] {
 [role="navigation"] li {
 	list-style: none;
 	float: none;
-	padding: 0em 0.9em 0.7em 0;
+	padding: 0.1em 0.9em 0.6em 0; /* Akzidenz Grotest has a slight offset on the top.*/
 }
 [role="navigation"] li a {
 	display: block;
