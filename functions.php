@@ -41,4 +41,12 @@
 		register_nav_menu('right-menu', 'Right Menu');
 	}
 
+	// This is for home-page only display posts with 'home-page' tag:
+	function exclude_category($query) {
+		if ($query->is_home() && $query->is_main_category()) {
+			
+		}
+	}
+	add_filter('pre_get_posts', 'exclude_category');
+
 ?>
