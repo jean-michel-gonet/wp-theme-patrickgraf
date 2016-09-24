@@ -42,11 +42,11 @@
 	}
 
 	// This is for home-page only display posts with 'home-page' tag:
-	function exclude_category($query) {
-		if ($query->is_home() && $query->is_main_category()) {
-			
+	function home_page_shows_featured_posts($query) {
+		if ($query->is_home) {
+			$query->set('tag', 'featured');
 		}
 	}
-	add_filter('pre_get_posts', 'exclude_category');
+	add_filter('pre_get_posts', 'home_page_shows_featured_posts');
 
 ?>
