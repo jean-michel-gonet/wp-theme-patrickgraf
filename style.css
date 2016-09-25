@@ -109,6 +109,23 @@ figcaption { text-align: center; }
 	color: #ce545f;
 	margin-top: 0.6em;
 }
+[role="main"] h1,h2 {
+	font-size: 9.5pt;
+	color: #ce545f;
+	font-family: "AG-Bold", clean, sans-serif;
+}
+[role="main"] h1 {
+	margin-top: 0.4em;
+}
+[role="main"] h2 {
+	margin: 4em 0 0.6em 0;
+}
+[role="main"] h2 ~ p {
+	/*margin-bottom: 1em;*/
+}
+[role="main"] h2 ~ p img {
+	margin: 4em 0 0.6em 0;
+}
 .article {
 	margin: 0 0 4em 0;
 	width: 100%;
