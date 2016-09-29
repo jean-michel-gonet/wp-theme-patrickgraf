@@ -12,7 +12,6 @@
 		<meta name="robots" content="index, follow" />
 		<?php wp_head(); ?>
 		<link rel="icon" type="image/png" href="favicon.png" />		
-		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 		<link rel="prev" href="<?php echo get_previous_posts_page_link(); ?>" />
 		<link rel="next" href="<?php echo get_next_posts_page_link(); ?>" />
 	</head>
@@ -49,10 +48,18 @@
 					}
 				?>
 			</section>
-			<ul id="pagination" role="navigation">
-				<li class="nav-next"><?php previous_posts_link( 'Newer posts' ); ?></li>	
-				<li class="nav-previous"><?php next_posts_link( 'Older posts' ); ?></li>
-			</ul>
+			<div role="navigation" id="pagination">
+				<ul>
+					<li class="nav-next"><a href="#">&lt;</a></li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li class="current"><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">6</a></li>
+					<li class="nav-previous"><a href="#">&gt;</a></li>
+				</ul>
+			</div>
 		</div>
 	</body>
 </html>

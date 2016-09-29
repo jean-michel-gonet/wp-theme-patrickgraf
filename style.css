@@ -105,25 +105,25 @@ figcaption { text-align: center; }
 	overflow: hidden;
 	margin: 0 1.2em 0 1.2em;
 }
-[role="main"] ul {
+
+.article ul {
 	color: #ce545f;
 	margin-top: 0.6em;
 }
-[role="main"] h1,h2 {
+.article h1,h2 {
 	font-size: 9.5pt;
 	color: #ce545f;
 	font-family: "AG-Bold", clean, sans-serif;
 }
-[role="main"] h1 {
+.article h1 {
 	margin-top: 0.4em;
 }
-[role="main"] h2 {
+.article h2 {
 	margin: 4em 0 0.6em 0;
 }
-[role="main"] h2 ~ p {
-	/*margin-bottom: 1em;*/
+.article p img {
 }
-[role="main"] h2 ~ p img {
+.article p ~ p img {
 	margin: 4em 0 0.6em 0;
 }
 .article {
@@ -150,20 +150,49 @@ nav[role="navigation"] {
 	margin: 0 0 6em 0;
 }
 
-[role="navigation"] ul {
+nav[role="navigation"] ul {
 	overflow: auto;
 }
-[role="navigation"] li {
+nav[role="navigation"] li {
 	list-style: none;
 	float: none;
 	padding: 0.1em 0.9em 0.6em 0; /* Akzidenz Grotest has a slight offset on the top.*/
 }
-[role="navigation"] li:empty {
+nav[role="navigation"] li:empty {
 	display: none;
 }
-[role="navigation"] li a {
+nav[role="navigation"] li a {
 	display: block;
 }
+
+#pagination {
+	text-align: center;
+	margin-bottom: 4em;
+        font-size: 13.5pt;
+        font-family: "AG-Bold", clean, sans-serif;
+        letter-spacing: 0.6pt;
+}
+#pagination ul {
+	display: inline-block;
+}
+#pagination ul li {
+	float: left;
+	list-style: none;
+	margin-left: 0.2em;
+}
+#pagination ul li.nav-next {
+	margin-right: 1em;
+}
+#pagination ul li.nav-previous {
+	margin-left: 0.8em;
+}
+#pagination ul li a {
+	color: #a2a2a2;
+}
+#pagination ul li.current a {
+	color: black;
+}
+
 
 @media all and (min-width: 600px) {
 	.container {
@@ -173,7 +202,7 @@ nav[role="navigation"] {
 		position: relative;
 		display: block;
 	}
-	[role="navigation"] li {
+	nav[role="navigation"] li {
 		float: left;
 	}
 }

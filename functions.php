@@ -7,7 +7,7 @@
 	
 	// This is for posts to have a thumb nail
 	add_theme_support( 'post-thumbnails' );
-	
+		
 	remove_action('wp_head', 'start_post_rel_link', 10, 0 );
 	remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 	remove_action('wp_head', 'rsd_link');
@@ -28,6 +28,9 @@
 		wp_enqueue_script( 'pgraf-script' );  
 	}
 
+	// This is to add version number to the CSS:	
+	wp_enqueue_style( "css", get_stylesheet_uri(), "", "1.0");
+
 	// This is to remove wrapping ul in menus
 	// remove ul wp_nav_menu
 	add_filter( 'wp_nav_menu', 'pgraf_menus_have_no_ul' );
@@ -45,6 +48,10 @@
 	function home_page_shows_featured_posts($query) {
 		if ($query->is_home) {
 			$query->set('tag', 'featured');
+		}
+		$category_name = $query->query_vars['category_name'];
+		if ($category_name == 'performances') {
+			$query->set('posts_per_page', 1);
 		}
 	}
 	add_filter('pre_get_posts', 'home_page_shows_featured_posts');
