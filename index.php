@@ -49,16 +49,7 @@
 				?>
 			</section>
 			<div role="navigation" id="pagination">
-				<ul>
-					<li class="nav-next"><a href="#">&lt;</a></li>
-					<li><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li class="current"><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li><a href="#">6</a></li>
-					<li class="nav-previous"><a href="#">&gt;</a></li>
-				</ul>
+			<?php echo custom_pagination(); ?>
 			</div>
 		</div>
 	</body>

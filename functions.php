@@ -29,7 +29,7 @@
 	}
 
 	// This is to add version number to the CSS:	
-	wp_enqueue_style( "css", get_stylesheet_uri(), "", "1.0");
+	wp_enqueue_style( "css", get_stylesheet_uri(), "", "1.1");
 
 	// This is to remove wrapping ul in menus
 	// remove ul wp_nav_menu
@@ -56,4 +56,40 @@
 	}
 	add_filter('pre_get_posts', 'home_page_shows_featured_posts');
 
+	function custom_pagination() {
+		global $wp_query;
+		$big = 999999999;
+		$pages = paginate_links(array(
+			'base' => str_replace($big, '%#%', get_pagenum_link($big)),
+			'format' => '?page=%#%',
+			'current' => max(1, get_query_var('paged')),
+			'total' => $wp_query->max_num_pages,
+			'prev_next' => false,
+			'type' => 'array',
+			'prev_next' => TRUE,
+			'prev_text' => '&lt;',
+			'next_text' => '&gt;',
+				));
+		if (is_array($pages)) {
+			$current_page = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
+			echo "<ul class=\"pagination\">\r\n";
+			foreach ($pages as $i => $page) {
+				$classes = "";
+				if ($current_page == 1 && $i == 0) {
+					$classes = "active";
+				}
+				if ($current_page != 1 && $current_page == $i) {
+					$classes = "active";
+				}
+				if (strpos($page, 'next') !== false) {
+					$classes = "$classes nav-next";
+				}
+				if (strpos($page, 'prev') !== false) {
+					$classes = "$classes nav-previous";
+				}
+				echo "	<li class=\"$classes\">$page</li>\r\n";
+			}
+			echo "</ul>\r\n";
+		}
+	}	
 ?>
