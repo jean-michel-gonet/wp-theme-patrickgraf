@@ -91,5 +91,10 @@
 			}
 			echo "</ul>\r\n";
 		}
-	}	
+	}
+	// This filter is to fix the srcset of images
+	add_filter('max_srcset_image_width', 'max_srcset_image_width');
+	function max_srcset_image_width($max_size, $size_array) {
+		return get_option('large_size_w');
+	}
 ?>
