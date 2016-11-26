@@ -1,8 +1,8 @@
 /*
 Theme Name: patrickgraf
 Theme URI: http://patrickgraf.agl-developpement.ch/
-Description: Customized theme for Patrick Graf, based on http://jasonweaver.name/lab/offcanvas.
-Author: Jean-Michel Gonet
+Description: Clean simplified theme customized for Patrick Graf, with responsive content supporti.
+Author: Jean-Michel Gonet and Werner Arnold
 Author URI: jmgonet.agl-developpement.ch
 Version: 1.0
 
@@ -10,18 +10,12 @@ Tags:
 
 License:
 License URI:
-
-General comments (optional).
 */
+
 @import "fonts/css/akzidenz-grotesk-extraboldalt.css";
 @import "fonts/css/akzidenz-grotesk-regular.css";
 @import "fonts/css/akzidenz-grotesk-super.css";
 @import "fonts/css/akzidenz-grotesk-bold.css";
-/* =============================================================================
-   JasonWeaver.name 2012
-   Copyright Jason Weaver
-   ========================================================================== */
-
 /* Reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
