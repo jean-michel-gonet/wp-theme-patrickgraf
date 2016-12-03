@@ -1,4 +1,15 @@
 <?php 
+	function patrickgraf_customize_register( $wp_customize ) {
+		$wp_customize->add_setting( 'header_textcolor' , array(
+			'default'     => '#000000',
+			'transport'   => 'refresh',
+		) );
+		$wp_customize->add_section( 'mytheme_new_section_name' , array(
+		    'title'      => __( 'Visible Section Name', 'mytheme' ),
+		        'priority'   => 30,
+			) );
+	}
+	add_action('customize_register', 'patrickgraf_customize_register');
 
 	register_nav_menus(); 
 	
@@ -29,7 +40,7 @@
 	}
 
 	// This is to add version number to the CSS:	
-	wp_enqueue_style( "css", get_stylesheet_uri(), "", "1.1");
+	wp_enqueue_style( "css", get_stylesheet_uri(), "", "1.2");
 
 	// This is to remove wrapping ul in menus
 	// remove ul wp_nav_menu
@@ -38,19 +49,13 @@
 		return preg_replace( array( '#^<ul[^>]*>#', '#</ul>$#' ), '', $menu );
 	}
 	
-	// Register a menu
-	add_action('init', 'register_menu');
-	function register_menu() {
-		register_nav_menu('right-menu', 'Right Menu');
-	}
-
 	// This is for home-page only display posts with 'home-page' tag:
 	function home_page_shows_featured_posts($query) {
 		if ($query->is_home) {
 			$query->set('tag', 'featured');
 		}
 		$category_name = $query->query_vars['category_name'];
-		if ($category_name == 'performances') {
+		if ($category_name == 'performances' || $category_name == 'prints') {
 			$query->set('posts_per_page', 1);
 		}
 	}
@@ -92,7 +97,7 @@
 			echo "</ul>\r\n";
 		}
 	}
-	// This filter is to fix the srcset of images
+	// This filter is to allow images in the srcset to be as big as the large media size.
 	add_filter('max_srcset_image_width', 'max_srcset_image_width');
 	function max_srcset_image_width($max_size, $size_array) {
 		return get_option('large_size_w');
