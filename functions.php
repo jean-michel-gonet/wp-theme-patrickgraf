@@ -55,7 +55,7 @@
 			$query->set('tag', 'featured');
 		}
 		$category_name = $query->query_vars['category_name'];
-		if ($category_name == 'performances' || $category_name == 'prints') {
+		if ($category_name == 'performances' || $category_name == 'prints' || $category_name == 'misc') {
 			$query->set('posts_per_page', 1);
 		}
 	}
