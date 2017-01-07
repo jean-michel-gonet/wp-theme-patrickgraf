@@ -177,11 +177,9 @@ nav[role="navigation"] li a {
 	margin-left: 0.9em;
 }
 #pagination ul li.nav-previous {
-	margin-right: 1em;
-    margin-left: 0;
+	margin-left: 0;
 }
 #pagination ul li.nav-next {
-	margin-left: 1.9em;
 }
 #pagination ul li a {
 	color: #a2a2a2;
