@@ -40,7 +40,7 @@
 	}
 
 	// This is to add version number to the CSS:	
-	wp_enqueue_style( "css", get_stylesheet_uri(), "", "1.3");
+	wp_enqueue_style( "css", get_stylesheet_uri(), "", "1.4");
 
 	// This is to remove wrapping ul in menus
 	// remove ul wp_nav_menu

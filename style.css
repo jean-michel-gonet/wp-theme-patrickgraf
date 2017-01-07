@@ -53,13 +53,13 @@ html {
 ::selection { background: #ff0; color: #000; text-shadow: none; }
 body { position: relative;}
 a {text-decoration: none; color: #247eb7;}
-h1,h2 {font-weight: 900; font-family: "AG-Bold", clean, sans-serif;}
+h1,h2 {font-family: AG-Bold, clean, sans-serif;}
 h1 {font-size: 24px;}
 h2 {font-size: 18px;}
 blockquote, p {font-size: 9.5pt; color: #ce545f;}
 blockquote { padding: 0 5%; color: #888; font-style: italic; font-family: georgia, serf; border-left: 2px solid #ddd;}
 code { font-family: "Lucida Console" monospace, monospace; _font-family: 'Lucida Console', monospace; font-size: 15px; font-weight: 900; color: #4b9162; }
-strong { font-weight: 900; font-family: "AG-Bold", clean, sans-serif;}
+strong { font-family: AG-Bold, clean, sans-serif;}
 figure { margin: 10% 0; }
 figcaption { text-align: center; }
 
@@ -132,7 +132,7 @@ figcaption { text-align: center; }
 .page-title a:hover { color: #555; }
 
 /* Site Menu */
-[role="navigation"] a {text-decoration: none; color: #929292; font-weight: 900; }
+[role="navigation"] a {text-decoration: none; color: #929292; }
 [role="navigation"] a:hover { color: #ce545f; }
 [role="navigation"] .current-cat a {color: #ce545f;}
 [role="navigation"] .current-menu-item a {color: #ce545f;}
@@ -162,11 +162,11 @@ nav[role="navigation"] li a {
 #pagination {
 	text-align: center;
 	margin-bottom: 4em;
-    font-size: 15pt;
-    font-family: "AG-Bold", clean, sans-serif;
-    letter-spacing: 0.6pt;
-    width: 100%;
-    max-width: 800px;
+	font-size: 15pt;
+	font-family: AG-Bold, clean, sans-serif;
+	letter-spacing: 0.6pt;
+	width: 100%;
+	max-width: 800px;
 }
 #pagination ul {
 	display: inline-block;
