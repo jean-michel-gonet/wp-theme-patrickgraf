@@ -1,10 +1,10 @@
 /*
 Theme Name: patrickgraf
-Theme URI: http://patrickgraf.agl-developpement.ch/
-Description: Clean simplified theme customized for Patrick Graf, with responsive content supporti.
-Author: Jean-Michel Gonet and Werner Arnold
+Theme URI: https://github.com/jean-michel-gonet/wp-theme-patrickgraf
+Description: Clean simplified theme customized for Patrick Graf, with responsive content support.
+Authors: Jean-Michel Gonet and Werner Arnold
 Author URI: jmgonet.agl-developpement.ch
-Version: 1.1
+Version: 1.5
 
 Tags:
 
@@ -59,7 +59,10 @@ h2 {font-size: 18px;}
 blockquote, p {font-size: 9.5pt; color: #ce545f;}
 blockquote { padding: 0 5%; color: #888; font-style: italic; font-family: georgia, serf; border-left: 2px solid #ddd;}
 code { font-family: "Lucida Console" monospace, monospace; _font-family: 'Lucida Console', monospace; font-size: 15px; font-weight: 900; color: #4b9162; }
-strong { font-family: AG-Bold, clean, sans-serif;}
+strong { 
+	font-family: AG-Bold, clean, sans-serif; 
+	font-weight: normal;
+}
 figure { margin: 10% 0; }
 figcaption { text-align: center; }
 
