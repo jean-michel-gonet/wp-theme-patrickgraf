@@ -194,10 +194,9 @@ nav[role="navigation"] li a {
 	color: black;
 }
 .footer {
-	margin: 0 0 1em 0;
-	color: #a6a6a6;
+	margin: 0 0 1.5em 1.5em;
+	color: #929292;
 }
-
 @media all and (min-width: 600px) {
 	.container {
 	        margin: 0 1.5em 0 1.5em;
