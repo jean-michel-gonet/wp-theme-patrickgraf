@@ -10,10 +10,10 @@
 			doc.setAttribute('class', 'js');
 		</script>
 		<meta name="robots" content="index, follow" />
-		<?php wp_head(); ?>
 		<link rel="icon" type="image/png" href="favicon.png" />		
 		<link rel="prev" href="<?php echo get_previous_posts_page_link(); ?>" />
 		<link rel="next" href="<?php echo get_next_posts_page_link(); ?>" />
+		<?php wp_head(); ?>
 	</head>
 	<body id="page">
 		<div class="image-viewer"><img src=""/></div>
@@ -52,5 +52,6 @@
 			<?php echo custom_pagination(); ?>
 			</div>
 		</div>
+		<?php wp_footer(); ?>
 	</body>
 </html>
